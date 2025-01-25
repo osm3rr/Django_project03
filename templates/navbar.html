@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Mejorada</title>
+    <style>
+        .navbar {
+            background-color: #640D5F;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 22px;
+            color: #FFB200;
+            margin-right: 20px;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #D91656;
+            color: #FFB200;
+        }
+        .navbar a.active {
+            background-color: #EB5B00;
+            color: #ffffff;
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 10px;
+        }
+        .navbar .logout {
+            margin-left: auto;
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar .logout {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Nombre de Mi Empresa</div>
+        <div class="menu">
+            <a href="#home" class="active">Home</a>
+        </div>
+        <a href="#logout" class="logout">Logout</a>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
