@@ -3,4 +3,8 @@
 
 <p>{{post.description}}</p>
 
-<h4><a href=""></a>Go back</h4>
+{% if post.image %}
+<img src="{{ post.image.url }}" alt="">
+{% else %}
+<h3>No hay señal de imagenes</h3>
+{% endif %}

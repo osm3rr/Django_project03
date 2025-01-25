@@ -59,7 +59,8 @@
     <div class="navbar">
         <div class="logo">Nombre de Mi Empresa</div>
         <div class="menu">
-            <a href="#home" class="active">Home</a>
+            <a href="{% url 'home' %}" class="active">Home</a>
+            <a href="{% url 'create' %}" class="active">Create</a>
         </div>
         <a href="#logout" class="logout">Logout</a>
     </div>
