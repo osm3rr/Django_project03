@@ -1,13 +1,31 @@
 
-<h1>{{post.title}}:</h1>
+{% load static %}
 
-<p>{{post.description}}</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{post.title}} - Detalle del Producto</title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+    <div class="product-detail">
+        <h1>{{post.title}}</h1>
+        <p class="description">{{post.description}}</p>
 
-{% if post.image %}
-<img src="{{ post.image.url }}" alt="">
-{% else %}
-<h3>No hay señal de imagenes</h3>
-{% endif %}
+        {% if post.image %}
+        <div class="image-container">
+            <img src="{{ post.image.url }}" alt="{{post.title}}">
+        </div>
+        {% else %}
+        <h3 class="no-image">No hay imagen disponible</h3>
+        {% endif %}
 
-<a href="{% url 'update' post.pk %}">Actualizar</a>
-<a href="{% url 'delete' post.pk %}">Eliminar</a>
+        <div class="actions">
+            <a href="{% url 'update' post.pk %}" class="btn update">Actualizar</a>
+            <a href="{% url 'delete' post.pk %}" class="btn delete">Eliminar</a>
+        </div>
+    </div>
+</body>
+</html>
