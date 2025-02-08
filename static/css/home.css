@@ -1,0 +1,89 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #ff8c00, #ffd700);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+}
+
+/* Animación para el fondo degradado */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contenedor principal de los artículos */
+.portfolio-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para cada artículo */
+.portfolio-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el artículo */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el título del artículo */
+.portfolio-item h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Georgia', serif; /* Cambia la fuente del título */
+    font-weight: bold; /* Hace que el texto sea negrita */
+}
+
+/* Estilos para los enlaces dentro de los artículos */
+.portfolio-item a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto del contenedor padre */
+}
+
+/* Efecto al pasar el mouse sobre el enlace */
+.portfolio-item a:hover {
+    color: #6a11cb; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Animación al hacer clic en el artículo */
+.portfolio-item:active {
+    animation: click-animation 0.3s ease;
+}
+
+@keyframes click-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para el mensaje cuando no hay artículos */
+.portfolio-container p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+}

@@ -1,11 +1,18 @@
+{% load static %}
 
-
-<form method="post" enctype="multipart/form-data">
-
-    {% csrf_token %}
-
-    {{ form.as_p }}
-
-    <input type="submit" value="save" >
-
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Elemento</title>
+    <link rel="stylesheet" href="{% static 'css/update.css' %}"> <!-- O forms.css si creaste un archivo nuevo -->
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>

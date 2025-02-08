@@ -1,0 +1,84 @@
+/* Estilos generales para el formulario */
+form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el formulario */
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los párrafos del formulario (generados por {{ form.as_p }}) */
+form p {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas de los campos */
+form label {
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al enfocar los campos de entrada */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="file"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #6a11cb;
+    outline: none;
+}
+
+/* Estilos para el botón de enviar */
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6a11cb;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón de enviar */
+form input[type="submit"]:hover {
+    background-color: #4a0d9b;
+}
+
+/* Efecto al hacer clic en el botón de enviar */
+form input[type="submit"]:active {
+    transform: scale(0.98);
+}
