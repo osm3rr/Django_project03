@@ -21,7 +21,8 @@ class UpdatePageView(UpdateView):
     model=Post
     fields= ["title","description","image"]
     template_name="update.html"
-    
+    success_url = reverse_lazy("home")
+
 class DeletePageView(DeleteView):
     model=Post
     template_name="delete.html"
