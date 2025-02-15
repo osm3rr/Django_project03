@@ -1,0 +1,17 @@
+
+
+{% if user.is_authenticated %}
+
+<h3>Bienvenido {{user.username}}</h3>
+
+<a href="{% url 'home' %}">Ingresar</a>
+
+{% else %}
+
+    <p>Crea tu cuenta, te esperamos</p>
+    <a href="{% url 'signup' %}">Sign up</a>
+
+    <p>Si ya posees una cuenta, ingresa por aca:</p>
+    <a href="{% url 'login' %}">Login</a>
+    
+{% endif %}
